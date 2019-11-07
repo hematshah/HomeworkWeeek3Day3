@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfHomeworkWeek3Day3.YesPart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHomeworkWeek3Day3"
+        mc:Ignorable="d"
+        Title="YesPart" Height="480" Width="640">
+    <Grid>
+        <Image Margin="-89,0,272,0" Source="8d79268aea902bc90784e62917399ac9.jpg" Stretch="Fill">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="8d79268aea902bc90784e62917399ac9.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBlock
+  x:Name="MyFadingText"
+  Margin="252,94,30,191" FontSize="14" FontWeight="Bold" Foreground="Maroon" TextAlignment="Center"><!-- Animates the text block's opacity. -->
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="MyFadingText" 
+            Storyboard.TargetProperty="(UIElement.Opacity)"
+            From="0.0" To="10.0" Duration="0:1:0" 
+            AutoReverse="True" RepeatBehavior="Forever" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers><Run Text="Great. These are my following choices"/><Run Text=":"/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="1) "/><Run Foreground="#FFA31515" Text="Monster On the Run"/><LineBreak/><Run Foreground="#FFA31515" Text="2) "/><Run Foreground="#FFA31515" Text="Alien Infestation"/><LineBreak/><Run Foreground="#FFA31515" Text="3) "/><Run Foreground="#FFA31515" Text="Stack The Tiles"/><LineBreak/><Run Foreground="#FFA31515"/><LineBreak/><Run Foreground="#FFA31515" Text="   Please choose one of the options to your liking."/><LineBreak/><Run Foreground="Black" Text=""/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <Button x:Name="optionOneButton" Content="Option 1" HorizontalAlignment="Left" Margin="285,273,0,0" VerticalAlignment="Top" Width="75" BorderBrush="#FF0E0D0D" Click="Button_Click" FontWeight="Bold" FontSize="14">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="optionThreeButton" Content="Option 3" HorizontalAlignment="Left" Margin="512,273,0,0" VerticalAlignment="Top" Width="75" BorderBrush="#FF0E0D0D" Click="Button_Click3" FontWeight="Bold" FontSize="14">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="optionTwoButton" Content="Option 2" HorizontalAlignment="Left" Margin="400,273,0,0" VerticalAlignment="Top" Width="75" BorderBrush="#FF0E0D0D" Click="Button_Click2" FontWeight="Bold" FontSize="14">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

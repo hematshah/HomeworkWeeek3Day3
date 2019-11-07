@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfHomeworkWeek3Day3.NoPart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHomeworkWeek3Day3"
+        mc:Ignorable="d"
+        Title="NoPart" Height="480" Width="640">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="#FF1E202A" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Margin="0,0,183,0" Source="363089_full.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <TextBlock
+  x:Name="MyFadingTextTerminate"
+  Margin="374,117,50,282" FontSize="14" FontWeight="Bold" Foreground="#FFF9F4F4" TextAlignment="Center" Grid.Column="1"><!-- Animates the text block's opacity. -->
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="MyFadingTextTerminate" 
+            Storyboard.TargetProperty="(UIElement.Opacity)"
+            From="5.0" To="0.0" Duration="0:0:5" 
+            AutoReverse="True" RepeatBehavior="Forever" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers><Run Text="CHOOSE WISELY OR "/><Run Text="YOU "/><LineBreak/><Run Text="WILL BE TERMINATED"/></TextBlock>
+        <TextBlock
+  x:Name="MyFadingText"
+  Margin="374,196,49,214" FontSize="48" FontWeight="Bold" Foreground="#FFEADADA" Grid.Column="1" TextAlignment="Center"><!-- Animates the text block's opacity. -->
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+            Storyboard.TargetName="MyFadingText" 
+            Storyboard.TargetProperty="(UIElement.Opacity)"
+            From="0.0" To="10.0" Duration="0:2:0" 
+            AutoReverse="True" RepeatBehavior="Forever" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers><Run FontSize="14" Text="Do"/><Run FontSize="14" Text=" you want to choose again?"/></TextBlock>
+        <Button Grid.ColumnSpan="2" Content="YES" HorizontalAlignment="Left" Margin="374,266,0,0" VerticalAlignment="Top" Width="96" Height="33" FontSize="16" FontWeight="Bold" Foreground="#FFEEE3E3" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button Grid.ColumnSpan="2" Content="NO" HorizontalAlignment="Left" Margin="487,266,0,0" VerticalAlignment="Top" Width="96" Height="33" FontSize="16" FontWeight="Bold" Foreground="#FFEEE3E3" Click="NoButton_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
