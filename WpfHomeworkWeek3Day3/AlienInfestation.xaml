@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="AlienInfestation" Height="480" Width="640">
     <Grid>
+        <Image Source="SI_NDS_AliensInfestation_image1600w.jpg" Stretch="Fill"/>
+
         <TextBlock
   x:Name="MyFadingText"
-  Margin="367,67,23,282" Height="100" FontSize="20" FontWeight="Bold" Foreground="Maroon" TextAlignment="Center"><!-- Animates the text block's opacity. -->
+  Margin="34,275,411,98" FontSize="14" FontWeight="Bold" Foreground="Maroon" TextAlignment="Center"><!-- Animates the text block's opacity. -->
             <TextBlock.Triggers>
                 <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard>
@@ -23,12 +25,12 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </TextBlock.Triggers><Run Text="It is under construction"/><Run Text="."/><LineBreak/><Run Text=" Do you wish to"/><Run Text=" "/><Run Text="return "/><LineBreak/><Run Text="to the options again?"/><LineBreak/><Run Text=""/></TextBlock>
-        <Button x:Name="YesButton" Content="YES" HorizontalAlignment="Left" Margin="406,200,0,0" VerticalAlignment="Top" Width="75" BorderBrush="#FF0E0D0D" Click="Button_Click2" FontWeight="Bold" FontSize="14">
+        <Button x:Name="YesButton" Content="YES" HorizontalAlignment="Left" Margin="34,356,0,0" VerticalAlignment="Top" Width="75" BorderBrush="#FF0E0D0D" Click="Button_Click2" FontWeight="Bold" FontSize="14">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="noButton" Content="NO" HorizontalAlignment="Left" Margin="522,200,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="noButton_Click" FontSize="14" BorderBrush="#FF0E0909">
+        <Button x:Name="noButton" Content="NO" HorizontalAlignment="Left" Margin="146,356,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="noButton_Click" FontSize="14" BorderBrush="#FF0E0909">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>

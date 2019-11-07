@@ -145,5 +145,11 @@
   <ItemGroup>
     <Resource Include="Image1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="z-XakeN6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SI_NDS_AliensInfestation_image1600w.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
